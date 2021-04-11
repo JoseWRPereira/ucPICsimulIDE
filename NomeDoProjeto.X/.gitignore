@@ -1,6 +1,10 @@
 
 /build/
 /debug/
-/nbproject/
 /dist/
+/nbproject/Makefile-default.mk
+/nbproject/Makefile-impl.mk
+/nbproject/Makefile-local-default.mk
+/nbproject/Package-default.bash
+
 
