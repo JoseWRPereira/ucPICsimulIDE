@@ -1,0 +1,30 @@
+<circuit noLinStep="10" speed="1000000" noLinAcc="5" type="simulide_0.1" animate="1" reactStep="50">
+ 
+Rail-14: 
+<item Voltage="5" Show_id="false" labelx="-16" labely="-24" labelrot="0" valLabely="6" rotation="90" Show_Volt="true" objectName="Rail-14" valLabRot="-90" hflip="1" itemtype="Rail" y="-348" Unit=" V" id="Rail-14" valLabelx="-5" x="-492" vflip="1"/>
+ 
+Resistor-4: 
+<item Show_id="true" labelx="-5" labely="-18" labelrot="0" valLabely="5" rotation="0" Resistance="150" objectName="Resistor-4" valLabRot="0" hflip="1" itemtype="Resistor" y="-284" Unit=" Ω" id="R0" valLabelx="-12" x="-468" vflip="1" Show_res="true"/>
+ 
+Led-3: 
+<item Show_id="true" Grounded="false" labelx="-17" labely="-5" Color="2" labelrot="-90" valLabely="0" rotation="90" Resistance="0.6" objectName="Led-3" Threshold="2.4" valLabRot="0" hflip="1" itemtype="Led" MaxCurrent="0.03" y="-308" id="LED" valLabelx="0" x="-492" vflip="1"/>
+ 
+pic16f887-2: 
+<item Ser_Monitor="false" Logic_Symbol="false" Show_id="true" Ser_Port="false" labelx="-1" labely="-11" labelrot="0" valLabely="0" rotation="0" objectName="pic16f887-2" valLabRot="0" hflip="1" itemtype="PIC" eeprom="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" Mhz="4" Program="P0101-piscaLED.X/dist/default/production/P0101-piscaLED.X.production.hex" y="-436" id="PIC16F887" valLabelx="0" x="-436" vflip="1"/>
+ 
+Connector-9: 
+<item Show_id="false" labelx="-16" endpinid="pic16f887-2-RD0" startpinid="Resistor-4-rPin" labely="-24" pointList="-452,-284,-444,-284" labelrot="0" valLabely="0" rotation="0" objectName="Connector-9" valLabRot="0" hflip="1" itemtype="Connector" y="-284" enodeid="Circ_eNode-10" id="Connector-20" valLabelx="0" x="-452" vflip="1"/>
+ 
+Connector-15: 
+<item Show_id="false" labelx="-16" endpinid="Led-3-lPin" startpinid="Rail-14-outnod" labely="-24" pointList="-492,-332,-492,-324" labelrot="0" valLabely="0" rotation="0" objectName="Connector-15" valLabRot="0" hflip="1" itemtype="Connector" y="-332" enodeid="enode-15" id="Connector-15" valLabelx="0" x="-492" vflip="1"/>
+ 
+Connector-16: 
+<item Show_id="false" labelx="-16" endpinid="Resistor-4-lPin" startpinid="Led-3-rPin" labely="-24" pointList="-492,-292,-492,-284,-484,-284" labelrot="0" valLabely="0" rotation="0" objectName="Connector-16" valLabRot="0" hflip="1" itemtype="Connector" y="-292" enodeid="enode-16" id="Connector-16" valLabelx="0" x="-492" vflip="1"/>
+ 
+PlotterWidget-11: 
+<item windowIcon="" pos="" whatsThis="" locale="" itemtype="Plotter" minimumHeight="200" geometry="" frameSize="" toolTip="" statusTip="" sizePolicy="" minimumSizeHint="" windowFilePath="" width="200" windowIconText="" normalGeometry="" MinVolt="-500" isActiveWindow="true" windowTitle="" toolTipDuration="-1" windowModified="false" visible="false" MaxVolt="500" modal="false" frameGeometry="" inputMethodHints="0" tabletTracking="false" sizeHint="" objectName="PlotterWidget-11" cursor="" childrenRegion="" maximumHeight="200" baseSize="" accessibleDescription="" minimumWidth="200" windowModality="0" autoFillBackground="false" size="" mouseTracking="false" focusPolicy="0" fullScreen="false" Tracks="1" minimumSize="" minimized="false" accessibleName="" maximumSize="" enabled="true" Scale="1" maximumWidth="1000" x="0" height="200" windowOpacity="1" palette="" y="0" maximized="false" rect="" styleSheet="" font="Sans Serif,9,-1,5,50,0,0,0,0,0" focus="false" sizeIncrement="" childrenRect="" updatesEnabled="true" contextMenuPolicy="1" acceptDrops="false" layoutDirection="0"/>
+ 
+SerialPortWidget-12: 
+<item windowIcon="" pos="" whatsThis="" locale="" itemtype="SerialPort" minimumHeight="0" SettingsProp=",0,3,0,0,0" geometry="" frameSize="" toolTip="" statusTip="" sizePolicy="" minimumSizeHint="" windowFilePath="" width="313" windowIconText="" normalGeometry="" isActiveWindow="true" windowTitle="Settings" toolTipDuration="-1" windowModified="false" visible="false" modal="false" frameGeometry="" inputMethodHints="0" tabletTracking="false" sizeHint="" objectName="SerialPortWidget-12" cursor="" childrenRegion="" maximumHeight="170" baseSize="" accessibleDescription="" minimumWidth="0" windowModality="0" autoFillBackground="false" size="" mouseTracking="false" focusPolicy="0" fullScreen="false" minimumSize="" minimized="false" accessibleName="" maximumSize="" enabled="true" maximumWidth="450" x="0" height="141" windowOpacity="1" palette="" y="0" maximized="false" rect="" styleSheet="" font="Sans Serif,9,-1,5,50,0,0,0,0,0" focus="false" sizeIncrement="" childrenRect="" updatesEnabled="true" contextMenuPolicy="1" acceptDrops="false" layoutDirection="0"/>
+ 
+</circuit>
