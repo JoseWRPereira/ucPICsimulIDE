@@ -4,11 +4,11 @@
  *
  * Created on 12 April 2021, 19:39
  * 
- * IDE:         MPLAB X IDE v5.45
- * Compiler:    XC8 v2.31
- * Operating System: Debian GNU/Linux bullseye/sid
- * Kernel: Linux 5.10.0-5-amd64
- * Architecture: x86-64
+ * IDE:                 MPLAB X IDE v5.45
+ * Compiler:            XC8 v2.31
+ * Operating System:    Debian GNU/Linux bullseye/sid
+ * Kernel:              Linux 5.10.0-5-amd64
+ * Architecture:        x86-64
  * 
  * Objetivo: 
  *      Piscar o LED com intervalo de 500 ms
