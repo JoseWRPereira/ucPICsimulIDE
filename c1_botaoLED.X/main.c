@@ -25,19 +25,19 @@
 #include <xc.h>                 // Inclui biblioteca padrão do compilador XC8 
                                 // para microcontroladores Microchip.
 
+#define LED     PORTDbits.RD0   // Definição ou "apelido", para o pino RD0
+#define BOTAO   PORTDbits.RD3   // Definição ou "apelido", para o pino RD3
+
 void main(void)                 // Função principal = main.
 {                               // Início do escopo da função main.
-    PORTDbits.RD0 = 0;          // Inicia RD0 com o valor 0.
+    LED = 0;                    // Inicia LED apagado.
     TRISDbits.TRISD0 = 0;       // Configura RD0 como Saída.
     TRISDbits.TRISD3 = 1;       // Configura RD3 como Entrada;
                                 // Não precisa inicialização do valor do pino.
 
     while( 1 )                  // Laço de repetição infinito.
     {                           // Inicio do escopo do laço de repetição.
-        if( PORTDbits.RD3 == 1 )// Condição: Se o botão estiver pressionado.
-            PORTDbits.RD0 = 1;  // Liga RD0.
-        else                    // Senão.
-            PORTDbits.RD0 = 0;  // Desliga RD0.
+        LED = BOTAO;            // O LED recebe o valor do BOTAO.
     }                           // Fim do escopo do laço de repetição.
     return;                     // Caracteriza main como uma função sem retorno.
 }                               // Fim do escopo da função main.
