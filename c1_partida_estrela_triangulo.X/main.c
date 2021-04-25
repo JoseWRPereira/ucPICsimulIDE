@@ -65,6 +65,8 @@ void main(void)
                     --tempo;
                     if( tempo == 0 )
                         estado = 4;
+                    if( pet_s0() )
+                        estado = 0;
                     break;
             case 4:
                     pet_k3_reset();
