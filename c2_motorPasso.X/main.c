@@ -64,18 +64,18 @@ void main(void)
     int estado = 0;
 
     dispLCD_init();
-    StepMotor_init();
-    
+    StepMotor_init(32);
+
     while( 1 )
     {
-        switch( estado )
-        {
-            case 0: dispLCD(0,0," Step Motor "); 
-                    estado = 1;
-                    break;
-            case 1:
-                    break;
-        }
-   }
-    return;
+        StepMotor( 90, DEGREES,  CW, FULL_STEP, 200 );  delay(2000);
+        StepMotor( 90, DEGREES, CCW, FULL_STEP, 200 );  delay(2000);
+        StepMotor(180, DEGREES,  CW, FULL_STEP, 200 );  delay(2000);
+        StepMotor(180, DEGREES, CCW, FULL_STEP, 200 );  delay(2000);
+        StepMotor( 90, DEGREES,  CW, HALF_STEP, 100 );  delay(2000);
+        StepMotor(180, DEGREES,  CW, FULL_STEP, 100 );  delay(2000);
+        StepMotor(270, DEGREES, CCW, HALF_STEP, 100 );  delay(3000);
+        StepMotor( 64, STEPS,   CCW, HALF_STEP, 100 );  delay(2000);
+        StepMotor( 32, STEPS,    CW, FULL_STEP, 100 );  delay(2000);
+    }
 }
