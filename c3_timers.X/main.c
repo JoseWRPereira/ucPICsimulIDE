@@ -16,7 +16,7 @@ void main(void)
 
     T0_init();
     T1_init();
-    T2_init();
+    T2_init(); 
 
     IHM.print(" T0    T1    T2 ");
     T0_start(30000);

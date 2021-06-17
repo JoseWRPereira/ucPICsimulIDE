@@ -75,9 +75,8 @@ void T1_init(void)
     PIE1bits.TMR1IE = 1;
     INTCONbits.GIE = 1;
 }
-
-
     
+
 void T1_int( void )
 {
     TMR1H = (TMR1_RELOAD >> 8) & 0x00FF;
