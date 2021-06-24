@@ -26,3 +26,5 @@
 /c3_timers.X/build/
 /c3_adc.X/build/
 /c3_adc.X/dist/
+/c3_adc_sensor_temperatura.X/dist/
+/c3_adc_sensor_temperatura.X/build/
