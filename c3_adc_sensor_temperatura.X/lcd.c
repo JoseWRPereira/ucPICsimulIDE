@@ -1,5 +1,6 @@
 #include <xc.h>
 #include "delay.h"
+#include "lcd.h"
 
 //***************** Interface com PORTs/Pinos
 #define LCD_BUS         LCDbits.BUS
@@ -24,6 +25,15 @@ typedef union
 } LCDbits_t;
 
 volatile LCDbits_t LCDbits __at(LCD_ADDRS);
+
+//***************** Caracteres especiais
+#define NEWCHAR_DEGREE_ADDRESS  NC_DEGREE
+const char newChar_degree[8] = {0x04, 0x0A, 0x04, 0x00,
+                                0x00, 0x00, 0x00, 0x00};
+
+
+
+
 
 //***************** Definicao de Comandos ao LCD 
 #define LCD_CLEAR_DISPLAY           0x01
@@ -120,6 +130,22 @@ void dispLCD_lincol( unsigned char lin, unsigned char col)
     dispLCD_instReg( LCD_SET_DDRAM_ADDRS( (LCD_ADDR_LINE_1 * lin) + (col + LCD_ADDR_LINE_0) ) );
 }
 
+// Escreve um novo caractere na CGRAM do display em adrs
+void dispLCD_newChar( unsigned char adrs, const char * ptr )
+{
+    char i;
+    dispLCD_instReg( LCD_SET_CGRAM_ADDRS( adrs<<3 ) );
+    for( i=0; i<8; i++ )
+        dispLCD_dataReg( *(ptr+i) );
+    dispLCD_instReg(LCD_CLEAR_DISPLAY);
+}
+// Posicionar o cursor e inserir o caractere indicado
+void dispLCD_putChar( unsigned char l, unsigned char c, unsigned char ascii_code )
+{
+    dispLCD_lincol( l, c );
+    dispLCD_dataReg( ascii_code );
+}
+
 // Inicializa os pinos conectados ao display
 void dispLCD_init( void )
 {
@@ -138,6 +164,8 @@ void dispLCD_init( void )
     dispLCD_instReg( LCD_DISPLAY_CONTROL|LCD_DC_DISPLAY_ON|LCD_DC_CURSOR_OFF|LCD_DC_BLINK_OFF );
     dispLCD_instReg( LCD_CLEAR_DISPLAY );
     dispLCD_instReg( LCD_RETURN_HOME );
+    delay(100);
+    dispLCD_newChar( NEWCHAR_DEGREE_ADDRESS, newChar_degree );
     delay(100);
 }
 

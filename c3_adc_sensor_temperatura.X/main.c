@@ -17,8 +17,11 @@ void main(void)
 {
     struct SensorTemperatura_t sensor;
     IHM.init();
+
     sensor_init(-50,50);
-    IHM.print("  C    K    F  ");
+    IHM.print("  C    K    F   ");
+    dispLCD_putChar(0, 1,0xDF);
+    dispLCD_putChar(0,11,0x0);
     while( 1 )
     {
         temperatura( &sensor );
